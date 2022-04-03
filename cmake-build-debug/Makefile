@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Matrix_Calculator_part_A.dir/build.make CMakeFiles/Matrix_Calculator_part_A.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+yossi.o: yossi.cpp.o
+
+.PHONY : yossi.o
+
+# target to build an object file
+yossi.cpp.o:
+	$(MAKE) -f CMakeFiles/Matrix_Calculator_part_A.dir/build.make CMakeFiles/Matrix_Calculator_part_A.dir/yossi.cpp.o
+.PHONY : yossi.cpp.o
+
+yossi.i: yossi.cpp.i
+
+.PHONY : yossi.i
+
+# target to preprocess a source file
+yossi.cpp.i:
+	$(MAKE) -f CMakeFiles/Matrix_Calculator_part_A.dir/build.make CMakeFiles/Matrix_Calculator_part_A.dir/yossi.cpp.i
+.PHONY : yossi.cpp.i
+
+yossi.s: yossi.cpp.s
+
+.PHONY : yossi.s
+
+# target to generate assembly for a file
+yossi.cpp.s:
+	$(MAKE) -f CMakeFiles/Matrix_Calculator_part_A.dir/build.make CMakeFiles/Matrix_Calculator_part_A.dir/yossi.cpp.s
+.PHONY : yossi.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... yossi.o"
+	@echo "... yossi.i"
+	@echo "... yossi.s"
 .PHONY : help
 
 

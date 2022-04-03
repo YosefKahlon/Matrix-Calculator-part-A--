@@ -87,6 +87,12 @@
 		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/main.cpp">
 			<Option target="Matrix_Calculator_part_A"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/yossi.cpp">
+			<Option target="Matrix_Calculator_part_A"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/yossi.hpp">
+			<Option target="Matrix_Calculator_part_A"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
