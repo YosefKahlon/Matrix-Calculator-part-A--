@@ -44,8 +44,8 @@ Matrix Matrix::operator+=(const Matrix &other) {
     }
     for (int i = 0; i < this->row; i++) {
         for (int j = 0; j < this->col; j++) {
-            int index = (unsigned int) (this->col * i + j);
-            this->matrix.at(index) += other.matrix.at(index);
+            int index =  (this->col * i + j);
+            this->matrix.at((unsigned long)index) += other.matrix.at((unsigned long)index);
         }
     }
     return Matrix(this->matrix, this->row, this->col);
@@ -57,8 +57,8 @@ Matrix Matrix::operator+=(const Matrix &other) {
 Matrix Matrix::operator++() {
     for (int i = 0; i < this->row; i++) {
         for (int j = 0; j < this->col; j++) {
-            int index = (unsigned int) (this->col * i + j);
-            this->matrix.at(index) += 1;
+            int index = (this->col * i + j);
+            this->matrix.at((unsigned long)index) += 1;
         }
     }
     return Matrix(this->matrix, this->row, this->col);
@@ -74,8 +74,8 @@ Matrix Matrix::operator-(const Matrix &other) {
     }
     for (int i = 0; i < this->row; i++) {
         for (int j = 0; j < this->col; j++) {
-            int index = (unsigned int) (this->col * i + j);
-            this->matrix.at(index) = this->matrix.at(index) - other.matrix.at(index);
+            int index = (this->col * i + j);
+            this->matrix.at((unsigned long)index) = this->matrix.at((unsigned long)index) - other.matrix.at((unsigned long)index);
         }
     }
     return Matrix(this->matrix, this->row, this->col);
@@ -87,8 +87,8 @@ Matrix Matrix::operator-(const Matrix &other) {
 Matrix Matrix::operator--() {
     for (int i = 0; i < this->row; i++) {
         for (int j = 0; j < this->col; j++) {
-            int index = (unsigned int) (this->col * i + j);
-            this->matrix.at(index) -= 1;
+            int index =  (this->col * i + j);
+            this->matrix.at((unsigned long)index) -= 1;
         }
     }
     return Matrix(this->matrix, this->row, this->col);
@@ -102,8 +102,8 @@ Matrix Matrix::operator--() {
 Matrix Matrix::operator-=(const Matrix &other) {
     for (int i = 0; i < this->row; i++) {
         for (int j = 0; j < this->col; j++) {
-            int index = (unsigned int) (this->col * i + j);
-            this->matrix.at(index) -= 1;
+            int index =  (this->col * i + j);
+            this->matrix.at((unsigned long)index) -= 1;
         }
     }
     return Matrix(this->matrix, this->row, this->col);
@@ -133,8 +133,8 @@ bool Matrix::operator==(const Matrix &other) {
     }
     for (int i = 0; i < this->row; ++i) {
         for (int j = 0; j < this->col; ++j) {
-            int index = (unsigned int) (this->col * i + j);
-            if (this->matrix[index] != other.matrix[index]) {
+            int index = (this->col * i + j);
+            if (this->matrix[(unsigned long)index] != other.matrix[(unsigned long)index]) {
                 return false;
             }
         }
@@ -148,8 +148,8 @@ bool Matrix::operator!=(const Matrix &other) {
     }
     for (int i = 0; i < this->row; ++i) {
         for (int j = 0; j < this->col; ++j) {
-            int index = (unsigned int) (this->col * i + j);
-            if (this->matrix[index] == other.matrix[index]) {
+            int index = (this->col * i + j);
+            if (this->matrix[(unsigned long)index] == other.matrix[(unsigned long)index]) {
                 return false;
             }
         }
@@ -208,8 +208,8 @@ ostream &zich::operator<<(ostream &os, const Matrix &matrix1) {
     for (int i = 0; i < matrix1.row; ++i) {
         os << "[ ";
         for (int j = 0; j < matrix1.col; ++j) {
-            unsigned int index = (unsigned int) (matrix1.col * i + j);
-            os << matrix1.matrix.at(index) << " ";
+            int index =  (matrix1.col * i + j);
+            os << matrix1.matrix.at((unsigned long)index) << " ";
         }
         os << "]\n";
     }
@@ -229,7 +229,8 @@ Matrix zich::operator*=(Matrix &other, double num) {
 double Matrix::check_sum(vector<double> vector1) {
     double counter = 0;
     for (int i = 0; i < vector1.size(); i++) {
-        counter += vector1.at(i);
+
+        counter += vector1.at((unsigned long)i);
     }
     return counter;
 }
