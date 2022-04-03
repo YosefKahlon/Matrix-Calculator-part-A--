@@ -44,8 +44,8 @@ Matrix Matrix::operator+=(const Matrix &other) {
     }
     for (int i = 0; i < this->row; i++) {
         for (int j = 0; j < this->col; j++) {
-            int index =  (this->col * i + j);
-            this->matrix.at((unsigned long)index) += other.matrix.at((unsigned long)index);
+            int index = (this->col * i + j);
+            this->matrix.at((unsigned long) index) += other.matrix.at((unsigned long) index);
         }
     }
     return Matrix(this->matrix, this->row, this->col);
@@ -58,7 +58,7 @@ Matrix Matrix::operator++() {
     for (int i = 0; i < this->row; i++) {
         for (int j = 0; j < this->col; j++) {
             int index = (this->col * i + j);
-            this->matrix.at((unsigned long)index) += 1;
+            this->matrix.at((unsigned long) index) += 1;
         }
     }
     return Matrix(this->matrix, this->row, this->col);
@@ -75,7 +75,8 @@ Matrix Matrix::operator-(const Matrix &other) {
     for (int i = 0; i < this->row; i++) {
         for (int j = 0; j < this->col; j++) {
             int index = (this->col * i + j);
-            this->matrix.at((unsigned long)index) = this->matrix.at((unsigned long)index) - other.matrix.at((unsigned long)index);
+            this->matrix.at((unsigned long) index) =
+                    this->matrix.at((unsigned long) index) - other.matrix.at((unsigned long) index);
         }
     }
     return Matrix(this->matrix, this->row, this->col);
@@ -87,8 +88,8 @@ Matrix Matrix::operator-(const Matrix &other) {
 Matrix Matrix::operator--() {
     for (int i = 0; i < this->row; i++) {
         for (int j = 0; j < this->col; j++) {
-            int index =  (this->col * i + j);
-            this->matrix.at((unsigned long)index) -= 1;
+            int index = (this->col * i + j);
+            this->matrix.at((unsigned long) index) -= 1;
         }
     }
     return Matrix(this->matrix, this->row, this->col);
@@ -102,8 +103,8 @@ Matrix Matrix::operator--() {
 Matrix Matrix::operator-=(const Matrix &other) {
     for (int i = 0; i < this->row; i++) {
         for (int j = 0; j < this->col; j++) {
-            int index =  (this->col * i + j);
-            this->matrix.at((unsigned long)index) -= 1;
+            int index = (this->col * i + j);
+            this->matrix.at((unsigned long) index) -= 1;
         }
     }
     return Matrix(this->matrix, this->row, this->col);
@@ -111,7 +112,7 @@ Matrix Matrix::operator-=(const Matrix &other) {
 }
 
 
-//------------------Six ratio operators(<,>,==,!= ,>= , <= )---------------------------
+/**------------------operators(<,>,==,!= ,>= , <= )---------------------------*/
 bool Matrix::operator<(const Matrix &other) {
     if (this->row != other.row || this->col != other.col) {
         throw invalid_argument("Matrix must have the same size !!");
@@ -134,7 +135,7 @@ bool Matrix::operator==(const Matrix &other) {
     for (int i = 0; i < this->row; ++i) {
         for (int j = 0; j < this->col; ++j) {
             int index = (this->col * i + j);
-            if (this->matrix[(unsigned long)index] != other.matrix[(unsigned long)index]) {
+            if (this->matrix[(unsigned long) index] != other.matrix[(unsigned long) index]) {
                 return false;
             }
         }
@@ -149,7 +150,7 @@ bool Matrix::operator!=(const Matrix &other) {
     for (int i = 0; i < this->row; ++i) {
         for (int j = 0; j < this->col; ++j) {
             int index = (this->col * i + j);
-            if (this->matrix[(unsigned long)index] == other.matrix[(unsigned long)index]) {
+            if (this->matrix[(unsigned long) index] == other.matrix[(unsigned long) index]) {
                 return false;
             }
         }
@@ -172,14 +173,7 @@ bool Matrix::operator<=(const Matrix &other) {
 }
 
 
-Matrix Matrix::operator*(const Matrix &other) {
-    if (this->row != other.row || this->col != other.col) {
-        throw invalid_argument("row or col no equal to real");
-    }
 
-    return Matrix(this->matrix, this->row, this->col);
-
-}
 
 
 Matrix zich::operator*(double num, Matrix &other) {
@@ -208,8 +202,8 @@ ostream &zich::operator<<(ostream &os, const Matrix &matrix1) {
     for (int i = 0; i < matrix1.row; ++i) {
         os << "[ ";
         for (int j = 0; j < matrix1.col; ++j) {
-            int index =  (matrix1.col * i + j);
-            os << matrix1.matrix.at((unsigned long)index) << " ";
+            int index = (matrix1.col * i + j);
+            os << matrix1.matrix.at((unsigned long) index) << " ";
         }
         os << "]\n";
     }
@@ -218,10 +212,22 @@ ostream &zich::operator<<(ostream &os, const Matrix &matrix1) {
     return os;
 }
 
+
+////////////////       todo    ///////////////////////////////////////////
+Matrix Matrix::operator*(const Matrix &other) {
+    if (this->col != other.row) {
+        throw invalid_argument("row must be equal to column !!");
+    }
+
+    return Matrix(other.matrix, this->row, other.col);
+
+}
+
+//todo
 iostream &zich::operator>>(iostream &os, const Matrix &matrix1) {
     return os;
 }
-
+//todo
 Matrix zich::operator*=(Matrix &other, double num) {
     return Matrix(other.matrix, 0, 0);
 }
@@ -230,7 +236,7 @@ double Matrix::check_sum(vector<double> vector1) {
     double counter = 0;
     for (int i = 0; i < vector1.size(); i++) {
 
-        counter += vector1.at((unsigned long)i);
+        counter += vector1.at((unsigned long) i);
     }
     return counter;
 }
