@@ -123,6 +123,33 @@ Matrix_Calculator_part_A/fast:
 	$(MAKE) -f CMakeFiles/Matrix_Calculator_part_A.dir/build.make CMakeFiles/Matrix_Calculator_part_A.dir/build
 .PHONY : Matrix_Calculator_part_A/fast
 
+Matrix.o: Matrix.cpp.o
+
+.PHONY : Matrix.o
+
+# target to build an object file
+Matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/Matrix_Calculator_part_A.dir/build.make CMakeFiles/Matrix_Calculator_part_A.dir/Matrix.cpp.o
+.PHONY : Matrix.cpp.o
+
+Matrix.i: Matrix.cpp.i
+
+.PHONY : Matrix.i
+
+# target to preprocess a source file
+Matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/Matrix_Calculator_part_A.dir/build.make CMakeFiles/Matrix_Calculator_part_A.dir/Matrix.cpp.i
+.PHONY : Matrix.cpp.i
+
+Matrix.s: Matrix.cpp.s
+
+.PHONY : Matrix.s
+
+# target to generate assembly for a file
+Matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/Matrix_Calculator_part_A.dir/build.make CMakeFiles/Matrix_Calculator_part_A.dir/Matrix.cpp.s
+.PHONY : Matrix.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -150,33 +177,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Matrix_Calculator_part_A.dir/build.make CMakeFiles/Matrix_Calculator_part_A.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-yossi.o: yossi.cpp.o
-
-.PHONY : yossi.o
-
-# target to build an object file
-yossi.cpp.o:
-	$(MAKE) -f CMakeFiles/Matrix_Calculator_part_A.dir/build.make CMakeFiles/Matrix_Calculator_part_A.dir/yossi.cpp.o
-.PHONY : yossi.cpp.o
-
-yossi.i: yossi.cpp.i
-
-.PHONY : yossi.i
-
-# target to preprocess a source file
-yossi.cpp.i:
-	$(MAKE) -f CMakeFiles/Matrix_Calculator_part_A.dir/build.make CMakeFiles/Matrix_Calculator_part_A.dir/yossi.cpp.i
-.PHONY : yossi.cpp.i
-
-yossi.s: yossi.cpp.s
-
-.PHONY : yossi.s
-
-# target to generate assembly for a file
-yossi.cpp.s:
-	$(MAKE) -f CMakeFiles/Matrix_Calculator_part_A.dir/build.make CMakeFiles/Matrix_Calculator_part_A.dir/yossi.cpp.s
-.PHONY : yossi.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Matrix_Calculator_part_A"
+	@echo "... Matrix.o"
+	@echo "... Matrix.i"
+	@echo "... Matrix.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... yossi.o"
-	@echo "... yossi.i"
-	@echo "... yossi.s"
 .PHONY : help
 
 

@@ -1,0 +1,68 @@
+//
+// Created by 97252 on 4/1/2022.
+//
+
+#ifndef MATRIX_CALCULATOR_A_MATRIX_HPP
+#define MATRIX_CALCULATOR_A_MATRIX_HPP
+
+#include "vector"
+#include "iostream"
+
+using namespace std;
+namespace zich {
+
+    class Matrix {
+
+    private:
+        vector<double> matrix;
+        int row;
+        int col;
+    public:
+        //constructor
+        Matrix(const std::vector<double> &matrix, int n, int m);
+
+
+        Matrix operator+(const Matrix &other);
+        Matrix operator-(const Matrix &other);
+
+        Matrix operator+=(const Matrix &other);
+        Matrix operator-=(const Matrix &other);
+        friend Matrix operator*=(Matrix &other, double num);
+
+
+        Matrix operator++();
+        Matrix operator--();
+
+
+
+
+        bool operator>(const Matrix &other);
+        bool operator<(const Matrix &other);
+        bool operator==(const Matrix &other);
+        bool operator!=(const Matrix &other);
+        bool operator>=(const Matrix &other);
+        bool operator<=(const Matrix &other);
+
+
+
+
+        Matrix operator*(const Matrix &other);
+        friend Matrix operator-(Matrix &matrix1);
+        friend Matrix operator*(double num, Matrix &other);
+
+
+
+
+
+        //output
+        friend ostream &operator<<(ostream &os, const Matrix &matrix1);
+        //input
+        friend iostream &operator>>(iostream &os, const Matrix &matrix1);
+
+
+        double check_sum(vector<double> vector1);
+    };
+
+
+}
+#endif //MATRIX_CALCULATOR_A_MATRIX_HPP

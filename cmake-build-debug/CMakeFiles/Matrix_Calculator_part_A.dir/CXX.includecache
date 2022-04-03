@@ -6,9 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/yossi.cpp
-yossi.hpp
-/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/yossi.hpp
+/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/Matrix.hpp
+vector
+/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/vector
+iostream
+/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/iostream
 
-/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/yossi.hpp
+/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/main.cpp
+iostream
+-
+Matrix.hpp
+/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/Matrix.hpp
 

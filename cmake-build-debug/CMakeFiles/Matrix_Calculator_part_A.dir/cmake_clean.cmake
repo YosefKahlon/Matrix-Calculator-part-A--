@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Matrix_Calculator_part_A.dir/Matrix.cpp.o"
   "CMakeFiles/Matrix_Calculator_part_A.dir/main.cpp.o"
-  "CMakeFiles/Matrix_Calculator_part_A.dir/yossi.cpp.o"
   "Matrix_Calculator_part_A"
   "Matrix_Calculator_part_A.pdb"
 )

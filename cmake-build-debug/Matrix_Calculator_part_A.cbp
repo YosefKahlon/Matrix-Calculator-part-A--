@@ -84,13 +84,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/Matrix.cpp">
+			<Option target="Matrix_Calculator_part_A"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/Matrix.hpp">
+			<Option target="Matrix_Calculator_part_A"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/main.cpp">
-			<Option target="Matrix_Calculator_part_A"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/yossi.cpp">
-			<Option target="Matrix_Calculator_part_A"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/yossi.hpp">
 			<Option target="Matrix_Calculator_part_A"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/Matrix-Calculator-part-A/CMakeLists.txt">

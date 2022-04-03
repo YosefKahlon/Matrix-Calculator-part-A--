@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Matrix_Calculator_part_A.dir/main.cpp.o CMakeFiles/Matrix_Calculator_part_A.dir/yossi.cpp.o  -o Matrix_Calculator_part_A 
+/usr/bin/c++  -g   CMakeFiles/Matrix_Calculator_part_A.dir/main.cpp.o CMakeFiles/Matrix_Calculator_part_A.dir/Matrix.cpp.o  -o Matrix_Calculator_part_A 
