@@ -3,3 +3,6 @@
 
 CMakeFiles/Matrix_Calculator_part_A.dir/main.cpp.o: ../main.cpp
 
+CMakeFiles/Matrix_Calculator_part_A.dir/yossi.cpp.o: ../yossi.cpp
+CMakeFiles/Matrix_Calculator_part_A.dir/yossi.cpp.o: ../yossi.hpp
+
