@@ -101,10 +101,14 @@ Matrix Matrix::operator--() {
  * every index in our matrix decreasing the same index from matrix other .
  */
 Matrix Matrix::operator-=(const Matrix &other) {
+    if (this->row != other.row || this->col != other.col) {
+        throw invalid_argument("Matrix must have the same size !!");
+    }
     for (int i = 0; i < this->row; i++) {
         for (int j = 0; j < this->col; j++) {
             int index = (this->col * i + j);
-            this->matrix.at((unsigned long) index) -= 1;
+            this->matrix.at((unsigned long) index) -=other.matrix.at((unsigned long) index);
+
         }
     }
     return Matrix(this->matrix, this->row, this->col);
@@ -240,6 +244,8 @@ double Matrix::check_sum(vector<double> vector1) {
     }
     return counter;
 }
+
+
 
 
 
